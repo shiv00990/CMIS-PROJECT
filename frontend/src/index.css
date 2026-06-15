@@ -1,0 +1,139 @@
+/* ------------------------------------------------------------------- */
+/* BASE STYLES AND RESETS (Uses Tailwind compatible colors and fonts) */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f7f7fa; /* Light background matching Tailwind gray-50 */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------- */
+/* HEADER STYLES (To complement Tailwind classes in Header.js) */
+/* ------------------------------------------------------------------- */
+
+.main-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    /* Styles are mostly handled by Tailwind classes in Header.js (bg-white, shadow-md) */
+}
+
+.main-header nav {
+    /* max-width, padding, and flex are handled by Tailwind */
+}
+
+.main-header .logout-btn {
+    transition: background-color 0.15s ease-in-out;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* AUTH FORM STYLES (For LoginPage and RegisterPage) */
+/* ------------------------------------------------------------------- */
+
+.form-container {
+    padding: 2rem;
+    max-width: 420px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 1rem; /* rounded-xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+}
+
+/* Input styling is mostly handled by FormInput.js's Tailwind classes */
+
+.error {
+    color: #dc2626; /* text-red-600 */
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.success {
+    color: #10b981; /* text-green-600 */
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* ------------------------------------------------------------------- */
+/* DASHBOARD MODULE CARDS (Used in Dashboard.js) */
+/* ------------------------------------------------------------------- */
+
+.module-links {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.module-card {
+    transition: all 0.3s ease;
+}
+
+/* ------------------------------------------------------------------- */
+/* COURSE CARD STYLES (Used in CourseCard.js) */
+/* ------------------------------------------------------------------- */
+
+.course-card {
+    transition: all 0.3s ease;
+}
+
+.course-card .description {
+    font-style: italic;
+    color: #6b7280; /* text-gray-500 */
+    border-top: 1px solid #f3f4f6;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* ------------------------------------------------------------------- */
+/* MARKS & FEES PAGES (Table and Status Colors) */
+/* ------------------------------------------------------------------- */
+
+/* Custom styling for failed marks/grades */
+.marks-results .fail {
+    color: #dc2626; /* Red for failure */
+    font-weight: 700;
+}
+
+.marks-results .pass {
+    color: #059669; /* Green for pass */
+}
+
+.fee-summary .paid-off {
+    border-color: #10b981; /* green-500 */
+    background-color: #f0fdf4; /* green-50 */
+}
+
+.fee-summary .due {
+    border-color: #f59e0b; /* yellow-500 */
+    background-color: #fffdf0; /* yellow-50 */
+}
+
+/* General messages */
+.info-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #e0f2fe; /* light blue */
+    color: #0284c7; /* deep blue */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid #7dd3fc;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4f46e5;
+    padding: 2rem;
+}
